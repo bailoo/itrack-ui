@@ -1,4 +1,4 @@
-function initialize() {
+/*function initialize() {
 	var mapCanvas = document.getElementById('map-canvas');
 	var mapOptions = {
 		center: new google.maps.LatLng(44.5403, -78.5463),
@@ -8,7 +8,7 @@ function initialize() {
 	var map = new google.maps.Map(mapCanvas, mapOptions)
 }
 google.maps.event.addDomListener(window, 'load', initialize);
-
+*/
 
 $(document).ready(function() {
 	$("#username").click(function(e) {
@@ -24,5 +24,11 @@ $(document).ready(function() {
 	});
 	
 	$('input.datepicker').Zebra_DatePicker();
-	
+	$(".darkcover").click(function() {
+		$(".darkcover").addClass("hide");
+	});
+	$(".window").click(function(e){e.stopPropagation()});
+	$(".closebtn").click(function() {
+		$(".darkcover").addClass("hide");
+	});
 });

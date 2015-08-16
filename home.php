@@ -8,48 +8,48 @@
 					<div class="select-all">
 						Select all
 					</div>
-				    <label>
+				    <label class="styledbox">
 						<input class="check" name="v" type="checkbox" value="1" />
 						Vehicle 1
 					</label>
 					
-					<label>
+					<label class="styledbox">
 						<input class="check" name="v" type="checkbox" value="2" />
 						Vehicle 2
 					</label>
 					
-					<label>
+					<label class="styledbox">
 						<input class="check" name="v" type="checkbox" value="3" />
 						Vehicle 3
 					</label>
 					
-					<label>
+					<label class="styledbox">
 						<input class="check" name="v" type="checkbox" value="4" />
 						Vehicle 4
 					</label>
 					
-					<label>
+					<label class="styledbox">
 						<input class="check" name="v" type="checkbox" value="5" />
 						Vehicle 5
 					</label>
 					
-					<label>
+					<label class="styledbox">
 						<input class="check" name="v" type="checkbox" value="6" />
 						Vehicle 6
 					</label>
 					
-					<label>
+					<label class="styledbox">
 						<input class="check" name="v" type="checkbox" value="7" />
 						Vehicle 7
 					</label>
 			</div>
 			<div class="holder light">
 				
-					<input id="rad1" class="hideradio" name="tracktype" type="radio" value="1" checked/>
-					<label for="rad1" class="radio">Last Position</label>
-				
-					<input id="rad2" class="hideradio" name="tracktype" type="radio" value="2" />
-					<label for="rad2" class="radio">Track</label>
+				<input id="rad1" class="hideradio" name="tracktype" type="radio" value="1" checked/>
+				<label for="rad1" class="radio">Last Position</label>
+			
+				<input id="rad2" class="hideradio" name="tracktype" type="radio" value="2" />
+				<label for="rad2" class="radio">Track</label>
 				<input type="text" name="start_date" class="custom_date datepicker spacealt" value="Start">
 				<input type="text" name="end_date" class="custom_date datepicker" value="End">
 				
@@ -142,9 +142,29 @@
 				<span style="font-size:11px">@ Copyright IESPL All Right Reserved</span>
 			</div>
 		</td>
-		<td class="right_cont" id="map-canvas">
+		<input id="pac-input" class="controls" type="text" placeholder="Search Box">
+		<td class="right_cont" id="map">
 		
 		</td>
 	</tr>
 
 </table>
+
+<!-- THE CENTER PART OF THE NAVIGATION BAR CODE HERE-->
+<div id="navcenter_content" style="display:none">
+	<span style="float:left">Display Option:&nbsp;&nbsp;</span>
+	<select class="darkselect compact" name="display_option" style="float:left">
+		<option name="all">All</option>
+		<option name="bygroup">By Group</option>
+		<option name="byuser">By User</option>
+		<option name="byvehicletag">By Vehicle Tag</option>
+		<option name="byvehicletype">By Vehicle Type</option>
+	</select>
+</div>
+
+<script src="map_search.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?libraries=places&callback=initAutocomplete"></script>
+<script>
+	$("#home").addClass("selected");
+	$("#navcenter").html($("#navcenter_content").html());
+</script>

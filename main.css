@@ -5,7 +5,7 @@
 	font-size:14px;
 }
 body,html {
-	min-width:600px;
+	min-width:800px;
 }
 
 #nav {
@@ -84,16 +84,29 @@ body,html {
 }
 
 #username_menu {
-	background-color:#222;
-	
+	background-color:#FFF;
+	border-radius: 0 0 2px 2px;
+	box-shadow:0 6px 12px rgba(0,0,0,.175);
+	padding:5px 0;
 }
+
+#navcenter {
+	margin-left:140px;
+	display:inline-block;
+	font-size:13px;
+	position:relative;
+	top:3px;
+}
+
+.center {text-align:center}
+.blockcenter {display:block;margin:0 auto}
 
 #username_menu a {
 	text-decoration:none;
-	color:#ccc;
+	color:#222;
 	text-align:center;
 	display:block;
-	padding: 5px;
+	padding: 2px 5px;
 	transition: all 0.2s linear;
 	-ms-transition: all 0.2s linear;
 	-moz-transition: all 0.2s linear;
@@ -102,8 +115,7 @@ body,html {
 }
 
 #username_menu a:hover {
-	background-color:#555;
-	color:#FFF;
+	background-color:#DDD;
 }
 
 #content {
@@ -116,7 +128,7 @@ body,html {
 	top:0;
 	z-index:0;
 	padding-top: 30px;
-	min-width:600px;
+	min-width:800px;
 }
 
 #sidebar {
@@ -206,9 +218,11 @@ input.dark {
 	padding:10px;
 	margin-bottom:10px;
 	border-radius:4px;
+	cursor:pointer;
+	color:#DDD;
 }
 
-label { 
+label.styledbox { 
 	display: block; 
 	padding: 5px;
 	cursor:pointer;
@@ -217,12 +231,14 @@ label {
 	-moz-transition: all 0.1s linear;
 	-webkit-transition: all 0.1s linear;
 	-o-transition: all 0.1s linear;
+	color:#DDD;
 }
 
 .select-all {
 	display:block;
 	padding:5px;
 	cursor:pointer;
+	color:#DDD;
 }
 
 .highlight { 
@@ -257,7 +273,14 @@ label:hover {
 	color:#aaa;
 	border:1px solid #555;
 	border-radius:3px;
+	min-width:115px;
 
+}
+
+.darkselect.compact {
+	font-size:12px;
+	background:#666;
+	color:#ccc;
 }
 
 .button {
@@ -341,4 +364,59 @@ label:hover {
 	padding: .2em 1em .275em;
 }
 
+.darkcover {
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background:url(img/modalbg.png);
+	z-index:1000;
+}
 
+.darkcover .window {
+	background:#333;
+	border-radius:4px;
+	width:35%;
+	min-width:400px;
+	height:600px;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	margin: auto;
+	position:absolute;
+	color:#DDD;
+	border:1px solid #555;
+}
+
+.windowbar {
+	position:relative;
+	height:20px;
+	background:#444;
+	padding:5px 10px;
+}
+
+.windowcontent {
+	padding:10px;
+}
+
+.hide {
+	display:none;
+}
+
+.window .closebtn {
+	background:url(img/close.png);
+	width:20px;
+	height:20px;
+	position:absolute;
+	right:5px;
+	top:5px;
+	cursor:pointer;
+}
+
+@media screen and (max-width:1270px) {
+	#navcenter {
+		margin-left:20px;
+	}
+}
