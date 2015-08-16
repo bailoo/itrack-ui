@@ -1,10 +1,10 @@
 <table id="content">
 	<tr>
 		<input id="pac-input" class="controls" type="text" placeholder="Search Box">
-		<td class="right_cont" id="map">
-		
-		</td>
 		<td id="sidebar">
+			<div class="sidebar_title">
+				Embedding Intelligence Everywhere
+			</div>
 			<div class="holder dark">
 				<div class="fleft">Display Option:</div>
 				<select class="darkselect compact fright" name="display_option">
@@ -27,11 +27,14 @@
 				<label for="addtrail">Add Trail</label>
 			</div>
 		</td>
+		<td class="right_cont" id="map">
+		
+		</td>
 	</tr>
 
 </table>
 
-<div class="darkcover">
+<div class="darkcover hideable">
 	<div class="window">
 		<div class="windowbar">
 			Vehicle List

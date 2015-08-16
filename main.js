@@ -10,10 +10,20 @@
 google.maps.event.addDomListener(window, 'load', initialize);
 */
 
+function prepareList() {
+  $('#expList').find('li:has(ul)')
+  	.click( function(event) {
+  		if (this == event.target) {
+  			$(this).toggleClass('expanded');
+  			$(this).children('ul').toggle('medium');
+  		}
+  		return false;
+  	})
+  	.addClass('collapsed')
+  	.children('ul').hide();
+}
+
 $(document).ready(function() {
-	$("#username").click(function(e) {
-		ShowMenu(e, this, "<a href='logout.php'>Logout</a>", "username_menu");
-	});
 	$('input:checkbox').click( function(){
 		$(this).parent('label').toggleClass('highlight', this.checked);
 	});
@@ -23,12 +33,28 @@ $(document).ready(function() {
 		$(".check").parent('label').addClass('highlight');
 	});
 	
-	$('input.datepicker').Zebra_DatePicker();
-	$(".darkcover").click(function() {
+	$(".darkcover.hideable").click(function() {
 		$(".darkcover").addClass("hide");
 	});
 	$(".window").click(function(e){e.stopPropagation()});
 	$(".closebtn").click(function() {
 		$(".darkcover").addClass("hide");
 	});
+	$(".sidebar_options div").click(function() {
+		$('.right_cont section').removeClass('show');
+		var oldtext = $(this).html();
+		var newtext = oldtext.replace(/ /gi,'_');
+		$('.right_cont section[name='+newtext+']').addClass("show");
+	});
+	
+	prepareList();
+	
+	$("#expList a").click(function() {
+		$('.right_cont section').removeClass('show');
+		var oldtext = $(this).html();
+		var newtext = oldtext.replace(/ /gi,'_');
+		$('.right_cont section[name='+newtext+']').addClass("show");
+		
+	});
+	
 });

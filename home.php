@@ -164,7 +164,9 @@
 
 <script src="map_search.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?libraries=places&callback=initAutocomplete"></script>
+<script src="zebra.js"></script>
 <script>
 	$("#home").addClass("selected");
 	$("#navcenter").html($("#navcenter_content").html());
+	$('input.datepicker').Zebra_DatePicker();
 </script>
