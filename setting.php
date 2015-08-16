@@ -12,7 +12,7 @@
 			</div>
 		</td>
 		<td class="right_cont">
-			<!--NOTE: JUST USE THE SAME NAMES FOR THE SECTION LIKE YOU USE IN THE SIDEBAR, SEPERATE NAMES WITH _-->
+			<!--NOTE: JUST USE THE SAME NAMES FOR THE SECTION LIKE YOU USE IN THE SIDEBAR, SEPERATE SPACES WITH _-->
 			<section name="Account_Detail" class="show">
 				<h1>Account Detail section</h1>
 			</section>
